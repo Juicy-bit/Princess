@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Crush</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #startButton {
+      cursor: pointer;
+      background: none;
+      border: none;
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #ffc0cb;
+      flex-direction: column;
+      z-index: 2;
+    }
+
+    #mainContent {
+      display: none;
+    }
+
+    #loveImg {
+      width: 120px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body class="gallery">
+  <div id="startButton">
+    <img src="heart.png" alt="Start" id="loveImg" />
+    <p>Click the love to begin 💖</p>
+  </div>
+  <audio id="bgMusic" loop>
+    <source src="flower.mp3" type="audio/mpeg">
+  </audio>
+  <div class="paws"></div>
+  <div class="container" id="mainContent">
+    <h1>💖 My Princess 💖</h1>
+    <p> She's the cutest, the prettiest, and truly the most amazing person I've ever known. Her smile lights up my world, and her presence makes everything better. She's not just my crush — she's my dream girl, my inspiration, and maybe... my future queen. 💖🐱</p>
+    <div class="image-grid">
+      <img src="jojie1.jpeg" alt="My Crush 1"/>
+      <img src="jojie2.jpeg" alt="My Crush 2"/>
+      <img src="jojie3.jpeg" alt="My Crush 3"/>
+    </div>
+    <a href="index.html" class="back">⬅ Back Home</a>
+  </div>
+  <script>
+    document.getElementById('startButton').addEventListener('click', function () {
+      document.getElementById('bgMusic').play();
+      document.getElementById('startButton').style.display = 'none';
+      document.getElementById('mainContent').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

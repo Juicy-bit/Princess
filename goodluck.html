@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Crush</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #startButton {
+      cursor: pointer;
+      background: none;
+      border: none;
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #ffc0cb;
+      flex-direction: column;
+      z-index: 2;
+    }
+
+    #mainContent {
+      display: none;
+    }
+
+    #loveImg {
+      width: 120px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body class="gallery">
+  <div id="startButton">
+    <img src="clover.png" alt="Start Good Luck" id="loveImg" />
+    <p>Click the clover to begin 🍀</p>
+  </div>
+  <audio id="bgMusic" loop>
+    <source src="beatiful.mp3" type="audio/mpeg">
+  </audio>
+  <div class="paws"></div>
+  <div class="container" id="mainContent">
+    <h1>🍀 Good Luck! 🍀</h1>
+    <p>Hi You,
+I just wanted to take a moment to wish you all the best for your upcoming exam this Friday (23 May 2025). I know how hard you've worked, and I truly believe in your strength, intelligence, and determination.
+
+You’re going to do amazing, not just because you're smart, but because you always give your best in everything you do.
+
+No matter how nervous you might feel, just remember — you've already won by giving your all. I’ll be quietly cheering for you from afar, hoping every question feels like a breeze and every answer flows smoothly.
+
+You've got this! Fighting! 💪
+
+Saya doakan awak berjaya dalam peperiksaan ni!!!.
+
+加油哦！你一定可以做到的，我相信你 🐾
+
+P.S. I’m always rooting for you. 🌟</p>
+
+    <a href="index.html" class="back">⬅ Back Home</a>
+  </div>
+  <script>
+    document.getElementById('startButton').addEventListener('click', function () {
+      document.getElementById('bgMusic').play();
+      document.getElementById('startButton').style.display = 'none';
+      document.getElementById('mainContent').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
